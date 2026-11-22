@@ -1,0 +1,53 @@
+/* ===== Musafir restaurant: custom styles (on top of Bootstrap 5) ===== */
+
+/* ---- Colour palette and fonts ---- */
+:root {
+  --m: #7F1D1D;   /* deep maroon: buttons, headings, hero */
+  --md: #450A0A;  /* darkest maroon: navbar, footer, admin sidebar */
+  --s: #F59E0B;   /* saffron: main action button of each section */
+  --c: #FFF7ED;   /* cream: page background */
+  --t: #292524;   /* dark brown: body text */
+  --bs-body-bg: #FFF7ED;
+  --bs-body-color: #292524;
+  --bs-link-color: #7F1D1D;
+  --bs-body-font-family: 'Nunito Sans', system-ui, sans-serif;
+}
+h1, h2, h3, h4, h5, .navbar-brand { font-family: 'Fraunces', Georgia, serif; }
+
+/* ---- Colour helper classes ---- */
+.bg-md { background: var(--md) !important; }
+.text-m { color: var(--m); }
+
+/* ---- Buttons: .btn-m = maroon, .btn-s = saffron ---- */
+.btn-m { background: var(--m); color: #fff; border-color: var(--m); }
+.btn-m:hover { background: #991B1B; color: #fff; }
+.btn-s { background: var(--s); color: #451A03; border-color: var(--s); }
+.btn-s:hover { background: #D97706; color: #fff; }
+
+/* ---- Photo placeholder box: replace with a real <img> later ---- */
+.ph { background: #FED7AA; color: #9A3412; display: flex; align-items: center;
+      justify-content: center; border-radius: .5rem; min-height: 120px; font-size: .9rem; }
+
+/* ---- Big banner on the home page and slim banner on other pages ---- */
+.hero { background: var(--m); color: var(--c); padding: 6rem 1rem; text-align: center; }
+.pagehead { background: var(--m); color: var(--c); padding: 2.2rem 1rem; text-align: center; }
+.pagehead p { color: #FED7AA; margin: 0; }
+
+/* ---- Cards and small details ---- */
+.card { border-color: #FED7AA; }
+.navbar .nav-link.active { border-bottom: 2px solid var(--s); }
+.nav-pills .nav-link { color: var(--m); }
+.nav-pills .nav-link.active { background: var(--m); color: #fff; }
+.stat { font-size: 1.8rem; font-weight: 600; color: var(--m); }
+
+/* ---- Veg / non-veg dot shown before each dish name ---- */
+.veg, .nonveg { display: inline-block; width: 12px; height: 12px; border: 2px solid;
+                margin-right: 6px; position: relative; }
+.veg { border-color: #16A34A; color: #16A34A; }
+.nonveg { border-color: #DC2626; color: #DC2626; }
+.veg::after, .nonveg::after { content: ""; position: absolute; inset: 2px;
+                              border-radius: 50%; background: currentColor; }
+
+/* ---- Admin sidebar links ---- */
+.side a { color: #FED7AA; display: block; padding: .6rem 1rem; text-decoration: none; }
+.side a.active, .side a:hover { background: var(--m); color: #fff; }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- Musafir restaurant website: Home page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Makes the page fit phone screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Musafir</title>
+  <!-- Google Fonts: Fraunces for headings, Nunito Sans for text -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CSS and Bootstrap icons (from CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Our own styles (palette and small helpers) -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== NAVBAR (same on every client page) ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-md">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-compass text-warning"></i> Musafir</a>
+      <!-- Hamburger button: shown only on small screens -->
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainMenu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <div class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="menu.html">Menu</a>
+          <a class="nav-link" href="gallery.html">Gallery</a>
+          <a class="nav-link" href="reviews.html">Reviews</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="btn btn-s btn-sm" href="book-table.html">Book a table</a>
+          <a class="btn btn-outline-light btn-sm" id="authLink" href="login.html">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+  <!-- ===== HERO: first thing the visitor sees ===== -->
+  <section class="hero">
+    <h1 class="display-5">Musafir restaurant</h1>
+    <p class="lead">A journey of delicious flavours</p>
+    <a href="menu.html" class="btn btn-s me-2">Explore menu</a>
+    <a href="book-table.html" class="btn btn-outline-light">Book a table</a>
+  </section>
+
+  <!-- ===== WELCOME: image on the left, text on the right (stacks on mobile) ===== -->
+  <section class="container py-5">
+    <div class="row align-items-center g-4">
+      <div class="col-md-5"><img src="images/restaurant.jpg" class="img-fluid rounded w-100" style="height:260px;object-fit:cover" alt="Restaurant" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.src.replace('.jpg','.svg')}else{this.onerror=null;this.src='images/placeholder.svg'}"></div>
+      <div class="col-md-7">
+        <h2 class="text-m">Welcome to Musafir</h2>
+        <p>Experience delicious food, warm hospitality and memorable moments.</p>
+        <a href="about.html" class="btn btn-m">Read more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POPULAR ITEMS: 1 column on phones, 3 on larger screens ===== -->
+  <section class="bg-white py-5">
+    <div class="container text-center">
+      <h2 class="text-m mb-4">Popular items</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4" id="popularItems"></div>
+      <a href="menu.html" class="btn btn-m mt-4">View more</a>
+    </div>
+  </section>
+
+  <!-- ===== SPECIALITY: signature dish ===== -->
+  <section class="container py-5 text-center">
+    <h2 class="text-m">Musafir specialities</h2>
+    <img src="images/special-biryani.jpg" class="img-fluid rounded w-100 my-3" style="max-height:340px;object-fit:cover" alt="Musafir special biryani" onerror="if(!this.dataset.t){this.dataset.t=1;this.src=this.src.replace('.jpg','.svg')}else{this.onerror=null;this.src='images/placeholder.svg'}">
+    <h3 class="h5">Musafir special biryani | ₹350</h3>
+    <p>Our signature dish prepared with special spices.</p>
+    <a href="contact.html" class="btn btn-s">Order now</a>
+  </section>
+  </main>
+
+  <!-- ===== FOOTER (same on every client page) ===== -->
+  <footer class="bg-md py-4 mt-5" style="color:#FED7AA">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-4"><b class="text-warning">Musafir</b><br>Restaurant description</div>
+        <div class="col-md-4"><b class="text-warning">Quick links</b><br>Home | About | Menu | Gallery</div>
+        <div class="col-md-4"><b class="text-warning">Contact us</b><br>
+          <i class="bi bi-geo-alt"></i> Address<br><i class="bi bi-telephone"></i> Phone<br><i class="bi bi-envelope"></i> Email</div>
+      </div>
+      <p class="text-center mt-3 mb-0 small">© 2026 Musafir restaurant | All rights reserved</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap's script file (mobile menu, tabs, popup, collapse) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Our own JavaScript: makes the pages dynamic -->
+  <script src="js/script.js"></script>
+</body>
+</html>

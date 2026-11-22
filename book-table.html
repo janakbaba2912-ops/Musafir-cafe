@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- Musafir restaurant website: Book a table page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Makes the page fit phone screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a table | Musafir</title>
+  <!-- Google Fonts: Fraunces for headings, Nunito Sans for text -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CSS and Bootstrap icons (from CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Our own styles (palette and small helpers) -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== NAVBAR (same on every client page) ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-md">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-compass text-warning"></i> Musafir</a>
+      <!-- Hamburger button: shown only on small screens -->
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainMenu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <div class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link" href="menu.html">Menu</a>
+          <a class="nav-link" href="gallery.html">Gallery</a>
+          <a class="nav-link" href="reviews.html">Reviews</a>
+          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="btn btn-s btn-sm" href="book-table.html">Book a table</a>
+          <a class="btn btn-outline-light btn-sm" id="authLink" href="login.html">Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main>
+  <!-- Page title banner -->
+  <section class="pagehead"><h1 class="h2">Reserve your table</h1><p>Book your table and enjoy a memorable dining experience</p></section>
+
+  <section class="container py-5">
+    <!-- Booking form. Later, set action to a server file (for example book.php) that saves the booking.
+         "required" makes the browser check empty fields without any JavaScript. -->
+    <form class="card p-4 mx-auto" style="max-width:460px" id="bookForm">
+      <div class="mb-3"><label class="form-label">Name</label><input class="form-control" type="text" name="name" placeholder="Your name"  required></div>
+      <div class="mb-3"><label class="form-label">Phone number</label><input class="form-control" type="tel" name="phone_number" placeholder="9876543210" pattern="[0-9]{10}" required></div>
+      <div class="row">
+        <div class="col"><div class="mb-3"><label class="form-label">Date</label><input class="form-control" type="date" name="date" placeholder=""  required></div></div>
+        <div class="col"><div class="mb-3"><label class="form-label">Time</label><input class="form-control" type="time" name="time" placeholder=""  required></div></div>
+      </div>
+      <div class="mb-3"><label class="form-label">Number of guests</label><input class="form-control" type="number" name="number_of_guests" placeholder="2" min="1" max="20" required></div>
+      <div class="mb-3"><label class="form-label">Special request (optional)</label><textarea class="form-control" name="request" rows="2"></textarea></div>
+      <button class="btn btn-s">Book now</button>
+    </form>
+  </section>
+  </main>
+
+  <!-- ===== FOOTER (same on every client page) ===== -->
+  <footer class="bg-md py-4 mt-5" style="color:#FED7AA">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-4"><b class="text-warning">Musafir</b><br>Restaurant description</div>
+        <div class="col-md-4"><b class="text-warning">Quick links</b><br>Home | About | Menu | Gallery</div>
+        <div class="col-md-4"><b class="text-warning">Contact us</b><br>
+          <i class="bi bi-geo-alt"></i> Address<br><i class="bi bi-telephone"></i> Phone<br><i class="bi bi-envelope"></i> Email</div>
+      </div>
+      <p class="text-center mt-3 mb-0 small">© 2026 Musafir restaurant | All rights reserved</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap's script file (mobile menu, tabs, popup, collapse) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Our own JavaScript: makes the pages dynamic -->
+  <script src="js/script.js"></script>
+</body>
+</html>
